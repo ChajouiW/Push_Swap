@@ -6,7 +6,7 @@
 /*   By: mochajou <mochajou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 16:43:12 by mochajou          #+#    #+#             */
-/*   Updated: 2025/01/13 21:26:27 by mochajou         ###   ########.fr       */
+/*   Updated: 2025/01/14 15:04:02 by mochajou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,12 +55,11 @@ t_list	*cheapest(t_list *stack)
 	return (cheapest);
 }
 
-int	ft_max(int a, int b)
+static int	ft_max(int a, int b)
 {
 	if (a > b)
 		return (a);
-	else
-		return (b);
+	return (b);
 }
 
 t_list	*cost_for_cheapest(t_list *a, t_list *b, int size1, int size2)
@@ -99,8 +98,6 @@ t_list	*prepare_stack(t_list **a, t_list **b)
 
 	size_a = ft_lstsize(*a);
 	size_b = ft_lstsize(*b);
-	indexing(*a);
-	indexing(*b);
 	set_target(a, b);
 	return (cost_for_cheapest(*a, *b, size_a, size_b));
 }

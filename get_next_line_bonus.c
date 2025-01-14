@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mochajou <mochajou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 15:07:50 by mochajou          #+#    #+#             */
-/*   Updated: 2025/01/12 16:32:06 by mochajou         ###   ########.fr       */
+/*   Updated: 2025/01/14 15:20:44 by mochajou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 char	*new_line(char *s)
 {
@@ -66,22 +66,3 @@ char	*get_next_line(int fd)
 		line = no_newline(&l3mara);
 	return (line);
 }
-/*
-#include <fcntl.h>
-#include <stdio.h>
-int main()
-{
-	int fd = open("test.txt", O_RDWR);
-
-	char *line = get_next_line(fd);
-	int i = 1;
-	while (line)
-	{
-		printf("line%d => %s",i++, line);
-		free(line);
-		line = get_next_line(fd);
-		getchar();
-	}
-	free(line);
-	close(fd);
-}*/

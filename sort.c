@@ -6,7 +6,7 @@
 /*   By: mochajou <mochajou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/02 17:29:30 by mochajou          #+#    #+#             */
-/*   Updated: 2025/01/13 20:59:08 by mochajou         ###   ########.fr       */
+/*   Updated: 2025/01/14 15:57:55 by mochajou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,8 +48,6 @@ void	push_to_a(t_list **a, t_list **b, t_list *cheapest)
 		while (*a != cheapest->target && *b != cheapest)
 			rrr(a, b);
 	}
-//	indexing(*a);
-//	indexing(*b);
 	lkmala(a, b, cheapest);
 	pa(b, a);
 }
@@ -76,7 +74,7 @@ void	sort_stack(t_list **a, t_list **b)
 		sa(a);
 	while (len_a > 3 && !sorted_stack(*a))
 	{
-		target_i = (len_a) / 3;
+		target_i = len_a / 4;
 		sorted_index(*a);
 		while (target_i < (*a)->sorted_index && !sorted_stack(*a))
 			ra(a);

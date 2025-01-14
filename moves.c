@@ -6,7 +6,7 @@
 /*   By: mochajou <mochajou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/01 13:52:08 by mochajou          #+#    #+#             */
-/*   Updated: 2025/01/10 16:49:27 by mochajou         ###   ########.fr       */
+/*   Updated: 2025/01/14 15:14:15 by mochajou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,19 +64,3 @@ void	push(t_list **src, t_list **dst)
 	*src = (*src)->next;
 	ft_lstadd_front(dst, tmp);
 }
-/*void	move(t_list **a, t_list **b)
-{
-	t_list	*min_node;
-
-	if (!a || !(*a))
-		return ;
-	min_node = find_min(*a);
-	while (*a != min_node)
-	{
-		if (min_node->above_median)
-			rotate(a);
-		else
-			rrotate(a);
-	}
-	push(a, b, 'b');
-}*/
